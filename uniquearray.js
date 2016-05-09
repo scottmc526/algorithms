@@ -1,3 +1,4 @@
+//The goal of this problem was to take an array of arrays and return a single array with all duplicates removed
 
 //make an array of arguments
 function makeArray (x) {
