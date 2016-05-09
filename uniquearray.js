@@ -16,10 +16,7 @@ function uniteUnique() {
  uniqueArray = merged.filter(function(item, pos) {
     return merged.indexOf(item) == pos;
   })
-
-  return uniqueArray;
-
-
+  return uniqueArray
 }
 
-console.log(uniteUnique([1,2,4,5], [1,3,5], ['a', 'b']));
+console.log(uniteUnique([1,2,4,5], [1,3,5], ['a', 'b', 2, 2]));
