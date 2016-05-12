@@ -13,7 +13,7 @@ function makeArray (x) {
 function uniteUnique() {
  var arrays = makeArray(arguments);;
  var merged = [].concat.apply([], arrays);
- uniqueArray = merged.filter(function(item, pos) {
+ var uniqueArray = merged.filter(function(item, pos) {
     return merged.indexOf(item) == pos;
   })
   return uniqueArray
