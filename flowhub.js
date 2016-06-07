@@ -15,4 +15,4 @@ function pyramid (height) {
   }
 }
 
-createHalfPyramid(3);
+pyramid(3);
