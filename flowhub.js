@@ -1,9 +1,9 @@
-function pyramid (height) {
+function pyramid (h) {
 
-  for (var i = 1; i <= height; i++) {
+  for (var i = 1; i <= h; i++) {
     var row = '';
 
-    for (var j = 1; j <= (height - i); j++) {
+    for (var j = 1; j <= (h - i); j++) {
       row += ' ';
     }
 
