@@ -47,7 +47,17 @@ function range (start, end) {
   for (var i = start; i <= end; i++) {
     arr.push(i)
   }
-  console.log(arr);
+  return arr;
 }
 
 range(1,5)
+
+//write a sum function that takes an array of numbers and returns the sum of these numbers.
+function sum(start, end) {
+  var total = 0;
+  range(start, end).reduce(function(prev, curr){
+    total += curr
+  }, 0)
+  return total
+}
+console.log(sum(1,675));
