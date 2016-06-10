@@ -22,4 +22,19 @@ function Even (n) {
   return n % 2 === 0 ? 'Even' : 'Odd'
 }
 
-console.log(Even(9));
+Even(9);
+
+//Write a function countChar that takes a string and a character as arguments. The function should count the amount of specified characters in the string
+
+function countChar (string, char) {
+  var arr = string.split('')
+  var counter = 0;
+  arr.forEach(function(item) {
+    if (item === char) {
+      counter++
+    }
+  })
+  return counter
+}
+
+console.log(countChar('Hello', 'l'));
