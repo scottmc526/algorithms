@@ -15,4 +15,4 @@ function pyramid (h) {
   }
 }
 
-pyramid(3);
+pyramid(5);

@@ -60,4 +60,11 @@ function sum(start, end) {
   }, 0)
   return total
 }
-console.log(sum(1,675));
+sum(1,675);
+
+// function to is it argument is an integer
+function isInt(num) {
+  return Number.isInteger(num) ? true : false
+}
+
+console.log(isInt('s'));
