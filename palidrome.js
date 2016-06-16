@@ -5,4 +5,4 @@ function isPalindrome (str) {
   return str === revStr ? true : false
 }
 
-console.log(isPalindrome('kayak kayak'));
+console.log(isPalindrome('opopopopopopopopopopo'));
