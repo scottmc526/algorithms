@@ -29,8 +29,7 @@
 
 //Array of three elements - the number of tasks labeled as Today, Upcoming and Later, respectively.
 
-
-
+//dumb solution:
 function tasksTypes(deadline, day) {
     var today = 0;
     var upcoming = 0;
@@ -51,3 +50,20 @@ function tasksTypes(deadline, day) {
     arr.push(later);
     console.log(arr)
 }
+
+//refactored
+function tasksTypes(deadline, day) {
+  var outcome= [0,0,0]
+    deadline.reduce(function(prev, curr){
+      if (curr >= day + 1 && curr <= day + 7) {
+        outcome[1]++
+      } else if (curr <= day) {
+        outcome[0] ++
+      } else {
+        outcome[2]++
+      }
+    }, 0)
+  return outcome
+}
+
+console.log(tasksTypes([1, 2, 4, 2, 10, 3, 1, 4, 5, 4, 9, 8], 1));
