@@ -29,35 +29,42 @@
 
 //Array of three elements - the number of tasks labeled as Today, Upcoming and Later, respectively.
 
+
+
+
+
 //dumb solution:
-function tasksTypes(deadline, day) {
-    var today = 0;
-    var upcoming = 0;
-    var later = 0;
-    var arr = [];
-    for(var i = 0; i < deadline.length; i++) {
-        if (deadline[i] >= day + 1 && deadline[i] <= day + 7 ) {
-            upcoming++
-        }
-        else if (day >= deadline[i] ){
-            today++
-        } else {
-            later++
-        }
-    }
-    arr.push(today);
-    arr.push(upcoming);
-    arr.push(later);
-    console.log(arr)
-}
+// function tasksTypes(deadline, day) {
+//     var today = 0;
+//     var upcoming = 0;
+//     var later = 0;
+//     var arr = [];
+//     for(var i = 0; i < deadline.length; i++) {
+//         if (deadline[i] >= day + 1 && deadline[i] <= day + 7 ) {
+//             upcoming++
+//         }
+//         else if (day >= deadline[i] ){
+//             today++
+//         } else {
+//             later++
+//         }
+//     }
+//     arr.push(today);
+//     arr.push(upcoming);
+//     arr.push(later);
+//     console.log(arr)
+// }
 
 //refactored
 function tasksTypes(deadline, day) {
   var outcome= [0,0,0]
   deadline.reduce(function(prev, curr){
-    curr >= day + 1 && curr <= day + 7 ? outcome[1]++ : (curr <= day ? outcome[0]++ : outcome[2]++)
+    curr <= day ? outcome[0]++ : (curr >= day + 1 && curr <= day + 7 ? outcome[1]++ : outcome[2]++)
   }, 0)
   return outcome
 }
 
-console.log(tasksTypes([1,2,3,4,5], 2));
+// console.log(tasksTypes([1, 2, 4, 2, 10, 3, 1, 4, 5, 4, 9, 8], 1));
+
+var batman = Array(16).join("wat"-1)+ " Batman!"
+console.log(batman);
