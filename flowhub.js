@@ -1,3 +1,4 @@
+//function that results in pyramid of h height
 function pyramid (h) {
 
   for (var i = 1; i <= h; i++) {
@@ -15,4 +16,4 @@ function pyramid (h) {
   }
 }
 
-pyramid(50);
+pyramid(5);

@@ -1,8 +1,7 @@
 //function that takes a string and returns the length of the longest word
 function findLongestWord(str) {
   var longest = 0;
-  var arr = str.split(' ');
-  arr.forEach((word) => {
+  str.split(' ').forEach((word) => {
     if(word.length > longest) {
       longest = word.length;
     }

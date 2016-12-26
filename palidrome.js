@@ -2,7 +2,7 @@
 
 function isPalindrome (str) {
   var revStr  = str.split('').reverse().join('')
-  return str === revStr ? true : false
+  return str === revStr
 }
 
 console.log(isPalindrome('opopopopopopopopopopo'));
